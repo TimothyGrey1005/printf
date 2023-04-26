@@ -70,8 +70,9 @@ int flags, int width, int precision, int size)
 
 		return (width);
 		}
-			else
+		else
 		{
+
 			return (width);
 		}
 	}
