@@ -48,9 +48,7 @@ int flags, int width, int precision, int size)
 		str = "(null)";
 
 		if (precision >= 6)
-		{
 			str = " ";
-		}
 	}
 
 	while (str[length] != '\0')
@@ -62,15 +60,19 @@ int flags, int width, int precision, int size)
 	if (width > length)
 	{
 		if (flags & F_MINUS)
+		{
 			write(1, &str[0], length);
 
 		for (i = width - length; i > 0; i--)
 			write(1, " ", 1);
 
 		return (width);
+		}
 		else
+		{
 
 			return (width);
+		}
 	}
 	return (write(1, str, length));
 }
